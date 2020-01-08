@@ -3,7 +3,7 @@ apply plugin: 'com.jakewharton.hugo'
 apply plugin: 'kotlin-android'
 
 ext.languages = ["de", "el", "fr", "in", "ja", "nl"]
-ext.supportLibraryVersion = "27.0.2"
+ext.supportLibraryVersion = "27.1.1"
 ext.c_languages = ["de", "el", "fr", "id", "ja", "nl"]
 ext.crowdinKey = null
 
@@ -112,7 +112,7 @@ dependencies {
     fdroidImplementation "com.mapzen.android:lost:2.2.0"
 
     testImplementation "junit:junit:4.12"
-    androidTestImplementation("com.android.support.test.espresso:espresso-core:2.2.2") {
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2") {
         exclude group: 'com.android.support'
     }
     androidTestImplementation("com.android.support.test:runner:0.5") {
