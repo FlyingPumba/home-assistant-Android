@@ -1,4 +1,14 @@
 apply plugin: 'com.android.application'
+
+/* ADDED for instrumentation begin */
+apply plugin: 'jacoco'
+
+
+jacoco {
+toolVersion = "0.8.2"
+}
+
+/* ADDED for instrumentation end */
 apply plugin: 'com.jakewharton.hugo'
 apply plugin: 'kotlin-android'
 
@@ -31,6 +41,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
+
+/* ADDED test coverage enabled for instrumentation begin */
+            testCoverageEnabled = true
+/* ADDED test coverage enabled for instrumentation end */
             debuggable true
             versionNameSuffix "-debug"
         }
